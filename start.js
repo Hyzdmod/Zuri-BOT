@@ -18,7 +18,7 @@ const readMore = more.repeat(4001)
 const store = makeInMemoryStore({ logger: pino().child({ level: 'trace', stream: 'store' }) })
 
 async function OpenConn() {
-  const { state, saveCreds } = await useMultiFileAuthState(`session.json`)
+  const { state, saveCreds } = await useMultiFileAuthState(`./session.json`)
 
   console.log(banner.string);
   console.log(centerBanner.string);
